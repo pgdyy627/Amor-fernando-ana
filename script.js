@@ -1,16 +1,18 @@
 
-function mostrarSurpresa() {
-    document.getElementById('surpresa').style.display = 'block';
+// Contador ao vivo
+const counterEl = document.getElementById('counter');
+const startDate = new Date("2024-04-29T00:00:00");
+
+function updateCounter() {
+  const now = new Date();
+  const diff = now - startDate;
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  counterEl.textContent = `Estamos juntos há ${days} dias de puro amor! 💕`;
 }
-function atualizarContador() {
-    const inicio = new Date('2024-04-29T00:00:00');
-    const agora = new Date();
-    const diff = agora - inicio;
-    const dias = Math.floor(diff / (1000 * 60 * 60 * 24));
-    const horas = Math.floor((diff / (1000 * 60 * 60)) % 24);
-    const minutos = Math.floor((diff / (1000 * 60)) % 60);
-    const segundos = Math.floor((diff / 1000) % 60);
-    document.getElementById('contador').innerText =
-        `${dias} dias, ${horas}h, ${minutos}m, ${segundos}s juntos 💞`;
-}
-setInterval(atualizarContador, 1000);
+setInterval(updateCounter, 1000);
+updateCounter();
+
+// Botão de surpresa
+document.getElementById('surpriseBtn').addEventListener('click', () => {
+  document.getElementById('surprise').classList.toggle('hidden');
+});

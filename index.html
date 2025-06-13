@@ -1,50 +1,32 @@
 
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Fernando & Ana Clara</title>
-  <link rel="stylesheet" href="style.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fernando & Ana Clara 💖</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div class="hearts"></div>
+
+  <audio id="bg-music" autoplay loop>
+    <source src="die-with-a-smile.mp3" type="audio/mpeg" />
+    Seu navegador não suporta áudio.
+  </audio>
+
   <div class="container">
-    <h1>Fernando ❤️ Ana Clara</h1>
-    <p class="subtitle">Desde 29/04/2024 — Nosso amor vence tudo!</p>
-
-    <audio id="music" autoplay loop>
-      <source src="audio/die-with-a-smile.mp3" type="audio/mpeg">
-      Seu navegador não suporta áudio.
-    </audio>
-
-    <div class="gallery">
-      <img src="images/foto1.jpg" alt="Foto 1">
-      <img src="images/foto2.jpg" alt="Foto 2">
-      <img src="images/foto3.jpg" alt="Foto 3">
+    <h1>Te Amo, Ana Clara ❤️</h1>
+    <p class="romantic-text">Você é minha felicidade, meu mundo, meu tudo.</p>
+    <p class="romantic-text">Desde 29/04/2024, minha vida ganhou um novo sentido com você.</p>
+    <p class="romantic-text">Juntos superamos dores, distâncias e solidão. E vamos vencer tudo, juntos!</p>
+    <button id="surpriseBtn">💌 Clique para uma surpresa</button>
+    <div id="surprise" class="hidden">
+      <p class="romantic-text">Você é meu eterno amor, Ana Clara. Quero você pra sempre! 💍</p>
     </div>
-
-    <div class="message">
-      <p>Ana Clara, você é minha felicidade, meu motivo de viver e a razão do meu sorriso.</p>
-      <p>Mesmo com tudo que enfrentamos — minha depressão, a dor do luto pelo seu pai, as falsas amizades e a distância — o nosso amor continua mais forte do que nunca.</p>
-      <p>Quero viver ao seu lado para sempre. 💖</p>
-    </div>
-
-    <div class="counter">
-      <p>Estamos juntos há:</p>
-      <h2 id="contador"></h2>
-    </div>
-
-    <button onclick="alert('Te amo demais, minha princesa linda ❤️')">Clique aqui para uma surpresa</button>
+    <p id="counter" class="counter"></p>
   </div>
 
-  <script>
-    const startDate = new Date("2024-04-29T00:00:00");
-    setInterval(() => {
-      const now = new Date();
-      const diff = now - startDate;
-      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-      document.getElementById("contador").textContent = days + " dias de amor!";
-    }, 1000);
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
