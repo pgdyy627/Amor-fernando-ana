@@ -1,52 +1,16 @@
 
-const startDate = new Date("2024-04-29T00:00:00");
-
-function updateTimer() {
-    const now = new Date();
-    const diff = now - startDate;
-
-    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-    const minutes = Math.floor((diff / (1000 * 60)) % 60);
-    const seconds = Math.floor((diff / 1000) % 60);
-
-    document.getElementById("timer").innerHTML = 
-        `${days} dias, ${hours} horas, ${minutes} minutos, ${seconds} segundos`;
+function mostrarSurpresa() {
+    document.getElementById('surpresa').style.display = 'block';
 }
-
-setInterval(updateTimer, 1000);
-
-function toggleMusic() {
-    const music = document.getElementById("bgMusic");
-    if (music.paused) {
-        music.play();
-    } else {
-        music.pause();
-    }
+function atualizarContador() {
+    const inicio = new Date('2024-04-29T00:00:00');
+    const agora = new Date();
+    const diff = agora - inicio;
+    const dias = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const horas = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const minutos = Math.floor((diff / (1000 * 60)) % 60);
+    const segundos = Math.floor((diff / 1000) % 60);
+    document.getElementById('contador').innerText =
+        `${dias} dias, ${horas}h, ${minutos}m, ${segundos}s juntos 💞`;
 }
-
-function showSurprise() {
-    const message = document.getElementById("surprise-message");
-    if (message.style.display === "block") {
-        message.style.display = "none";
-    } else {
-        message.style.display = "block";
-        createHearts();
-    }
-}
-
-function createHearts() {
-    const body = document.querySelector("body");
-    for (let i = 0; i < 30; i++) {
-        const heart = document.createElement("div");
-        heart.className = "heart";
-        heart.textContent = "💖";
-        heart.style.left = Math.random() * 100 + "vw";
-        heart.style.animationDuration = (Math.random() * 3 + 2) + "s";
-        body.appendChild(heart);
-
-        setTimeout(() => {
-            heart.remove();
-        }, 5000);
-    }
-}
+setInterval(atualizarContador, 1000);

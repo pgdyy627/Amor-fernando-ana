@@ -1,31 +1,33 @@
 
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fernando & Ana Clara</title>
-    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Fernando & Ana Clara 💖</title>
+    <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-    <div class="container">
-        <h1>Fernando & Ana Clara</h1>
-        <p class="love-message">Você é minha felicidade, meu motivo de sorrir e viver. Te amo pra sempre!</p>
-        <div class="counter">
-            <h2>Estamos juntos há:</h2>
-            <div id="timer"></div>
-        </div>
-        <div class="buttons">
-            <button onclick="toggleMusic()">🎵 Tocar Música</button>
-            <button onclick="showSurprise()">💖 Surpresa</button>
-        </div>
-    </div>
-    <div id="surprise-message" class="hidden">
-        <h2>Você é tudo pra mim, Ana Clara! Te amo mais que tudo! 💖</h2>
-    </div>
-    <audio id="bgMusic" loop>
-        <source src="music/music.mp3" type="audio/mpeg">
+    <audio autoplay loop>
+        <source src="die-with-a-smile.mp3" type="audio/mpeg">
+        Seu navegador não suporta áudio HTML5.
     </audio>
-    <script src="js/script.js"></script>
+
+    <div class="container">
+        <h1>Fernando & Ana Clara 💘</h1>
+        <p class="date">Desde: 29/04/2024</p>
+        <div id="contador"></div>
+        <div class="mensagem">
+            <p>Ana Clara, você é minha felicidade, meu motivo de viver e meu amor eterno.</p>
+            <p>Mesmo com a distância, com a dor da perda do seu pai, com minha depressão, com as ausências da vida... nós seguimos juntos.</p>
+            <p>Você me completa, me levanta, me inspira. E tudo que mais quero é você pra sempre.</p>
+        </div>
+        <button onclick="mostrarSurpresa()">💌 Clique para uma surpresa</button>
+        <div id="surpresa" class="escondido">
+            <p>Você é meu universo inteiro. Te amo mais do que palavras podem dizer.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
