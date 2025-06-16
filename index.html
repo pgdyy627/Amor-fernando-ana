@@ -1,32 +1,31 @@
 
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fernando & Ana Clara 💖</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fernando & Ana Clara</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div class="hearts"></div>
-
-  <audio id="bg-music" autoplay loop>
-    <source src="die-with-a-smile.mp3" type="audio/mpeg" />
-    Seu navegador não suporta áudio.
-  </audio>
-
-  <div class="container">
-    <h1>Te Amo, Ana Clara ❤️</h1>
-    <p class="romantic-text">Você é minha felicidade, meu mundo, meu tudo.</p>
-    <p class="romantic-text">Desde 29/04/2024, minha vida ganhou um novo sentido com você.</p>
-    <p class="romantic-text">Juntos superamos dores, distâncias e solidão. E vamos vencer tudo, juntos!</p>
-    <button id="surpriseBtn">💌 Clique para uma surpresa</button>
-    <div id="surprise" class="hidden">
-      <p class="romantic-text">Você é meu eterno amor, Ana Clara. Quero você pra sempre! 💍</p>
+    <div class="container">
+        <h1>Fernando & Ana Clara</h1>
+        <p class="love-message">Você é minha felicidade, meu motivo de sorrir e viver. Te amo pra sempre!</p>
+        <div class="counter">
+            <h2>Estamos juntos há:</h2>
+            <div id="timer"></div>
+        </div>
+        <div class="buttons">
+            <button onclick="toggleMusic()">🎵 Tocar Música</button>
+            <button onclick="showSurprise()">💖 Surpresa</button>
+        </div>
     </div>
-    <p id="counter" class="counter"></p>
-  </div>
-
-  <script src="script.js"></script>
+    <div id="surprise-message" class="hidden">
+        <h2>Você é tudo pra mim, Ana Clara! Te amo mais que tudo! 💖</h2>
+    </div>
+    <audio id="bgMusic" loop>
+        <source src="music/music.mp3" type="audio/mpeg">
+    </audio>
+    <script src="js/script.js"></script>
 </body>
 </html>

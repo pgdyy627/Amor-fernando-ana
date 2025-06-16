@@ -1,72 +1,60 @@
 
 body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to bottom, #ffccd5, #ffe6eb);
-  color: #fff;
-  overflow-x: hidden;
-  position: relative;
-  text-align: center;
+    background-color: #fff0f5;
+    color: #222;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
-
 .container {
-  padding: 2em;
-  color: #000;
+    padding: 20px;
 }
-
 h1 {
-  font-size: 2.5em;
-  color: #e6005c;
+    color: red;
 }
-
-.romantic-text {
-  font-size: 1.3em;
-  margin-top: 1em;
-  animation: fadeIn 2s ease-in-out;
+.love-message {
+    font-size: 1.5em;
+    margin: 10px 0;
 }
-
-button {
-  margin-top: 2em;
-  padding: 1em 2em;
-  background-color: #ff3366;
-  color: white;
-  border: none;
-  border-radius: 25px;
-  font-size: 1em;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: #cc0044;
-}
-
-.hidden {
-  display: none;
-}
-
 .counter {
-  margin-top: 2em;
-  font-size: 1.2em;
-  color: #333;
+    background-color: #ffe4e1;
+    padding: 10px;
+    border-radius: 10px;
 }
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+.buttons button {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
 }
-
-/* Corações flutuantes */
-.hearts::before, .hearts::after {
-  content: "💖 💕 💓 💘 💝";
-  font-size: 2em;
-  position: absolute;
-  top: 0;
-  animation: floatHearts 10s linear infinite;
+.buttons button:hover {
+    background-color: #ff1493;
 }
-
-@keyframes floatHearts {
-  0% { transform: translateY(0); opacity: 1; }
-  100% { transform: translateY(-100vh); opacity: 0; }
+#surprise-message {
+    background-color: rgba(255,192,203,0.9);
+    padding: 20px;
+    border-radius: 10px;
+    position: fixed;
+    top: 20%;
+    left: 10%;
+    right: 10%;
+    display: none;
+}
+.heart {
+    position: fixed;
+    top: -10px;
+    color: pink;
+    font-size: 2rem;
+    animation: fall linear forwards;
+}
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
 }
